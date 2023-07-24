@@ -52,7 +52,7 @@ export const Navbar = () => {
         </Box>
       </Box>
 
-      <Flex bg="#07154D" h="120px" justifyContent="space-around">
+      <Flex bg="#0E1A4C" h="120px" justifyContent="space-around">
         <Flex w={{ base: "100%", md: "100%", lg: "80%" }} justifyContent="center">
           <Box
             bg="transparent"
