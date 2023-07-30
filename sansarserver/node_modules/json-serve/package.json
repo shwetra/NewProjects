@@ -1,0 +1,17 @@
+{
+  "name": "json-serve",
+  "version": "0.1.0",
+  "description": "",
+  "bin": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mathieu Dutour <mathieu@dutour.me> (http://mathieu.dutour.me/)",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "1.5.1",
+    "commander": "2.9.0",
+    "express": "4.13.4",
+    "glob": "7.0.3"
+  }
+}
