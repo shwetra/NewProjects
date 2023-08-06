@@ -4,6 +4,7 @@ import Footer from './Components/Footer';
 import  Navbar  from './Components/Navbar';
 import { AllRoutes } from './Components/AllRoutes';
 import Login from './Components/Login';
+;
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Box h={{base:"100px",md:"55px"}}><Navbar/></Box>
       
      <AllRoutes/>
-    
+  
     <Footer/>
     </Box>
   );

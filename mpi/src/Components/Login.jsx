@@ -7,14 +7,18 @@ import {
     Heading,
     Image,
     Input,
-    Link,
     Stack,
     Text,
     useToast,
   } from "@chakra-ui/react";
+
+
   import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
   
   function Login() {
+    const nav=useNavigate()
     const toast = useToast();
     const [data, setData] = useState({
       email: "",
@@ -25,27 +29,33 @@ import {
       setData({ ...data, [e.target.name]: e.target.value });
     };
     const handleSubmit = () => {
-      if (data.user !== "" && data.email !== "" && data.url !== "") {
-        console.log(data);
+      if (data.email === "vikashsir@gmail.com" && data.password=== "123456789") {
+        localStorage.setItem("ak", JSON.stringify("qwertyhgfdsa"));
+        toast({
+          title: "Login Successfully",
+          description: "Hello Vikash 🙆‍♂️",
+          status: "success",
+          position: "top",
+        });
+        nav("/dashboard");
       } else {
         toast({
           title: "Information Required",
           description: "Kindly fill all details",
-          status: "success",
+          status: "error",  // Issue: Should be "error" instead of "falure"
           position: "top",
         });
       }
     };
+    
   
-    useEffect(() => {
-      console.log(data);
-    });
+  
   
     return (
       <Box m={"auto"} mt={"100px"}  >
      <Flex w={{base:"90%",md:"80%",lg:'60%'}} h={{base:'600px',md:'300px',lg:'300px'}} m={'auto'} border={'2px solid black'} borderRadius={"20px"} direction={{base:"column",md:"row",lg:"row"}}>
         <Box bg="teal" w={{base:'100%',md:'40%',lg:'30%'}} borderRadius={"19px"} > 
-        <Image  pt="40px" src='https://mpieducation.com/MPI%20edit.png'/>
+        <Image  pt="40px" src='https://github-production-user-asset-6210df.s3.amazonaws.com/104376252/251547112-5bbe02c4-243b-407d-8206-ff2d25bdec0d.png'/>
         </Box>
         <Box ml="20px" w={{base:'90%',md:'40%',lg:'60%'}}>
             <Heading fontSize={"20px"}>Consultant Login</Heading>

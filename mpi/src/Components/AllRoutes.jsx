@@ -15,6 +15,13 @@ import { Teaching } from './Course.jsx/Teaching'
 import { Pharmacy } from './Course.jsx/Pharmacy'
 import { Paramedical } from './Course.jsx/Paramedical'
 import { Diploma } from './Course.jsx/Diploma'
+import { Center } from './Center'
+import { Contact } from './Contact'
+import { Dashboard } from './Dashboard'
+import Private from './PrivateRoute'
+import { About } from './Aboute'
+import { Placement } from './Placement'
+import { Carrer } from './Carrer'
 
 
 
@@ -32,6 +39,8 @@ export const AllRoutes = () => {
 
         <Route path="/engineering" element={<Eangineering/>}/>
         <Route path="/hotel-management" element={<Hotel/>}/>
+        <Route path="/about" element={<About/>}/>
+
         
 
         <Route path="/agriculture" element={<Agriculture/>}/>
@@ -42,6 +51,15 @@ export const AllRoutes = () => {
         <Route path="/certificate-diploma" element={<Diploma/>}/>
 
 
+
+
+//ksks
+<Route path='/authorizedcenter' element={<Center/>}/>
+<Route path="/contact" element={<Contact/>} />
+<Route path="/dashboard" element={<Private><Dashboard/></Private>} />
+
+<Route path='/placement' element={<Placement/>}/>
+<Route path="/career" element={<Carrer/>} />
 
         
     </Routes>
